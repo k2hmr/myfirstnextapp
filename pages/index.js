@@ -13,14 +13,21 @@ export default function Home() {
   if (!data) return <div>loading...</div>
 
   return (
-    <>
+    <Content>
       <Head>
         <title>{ title }</title>
       </Head>
       <Header title={ title } />
-    <Content>
       <p>{data.message}</p>
+      <div>
+        <Link href="/about"><a>About</a></Link>
+      </div>
+      <style jsx>{`
+        h1 {
+          color: white;
+        }
+      `}</style>
+
     </Content>
-    </>
   )
 }
